@@ -313,7 +313,7 @@ class Tracker(object):
     # dimensions/metrics)
     def set(self, name, value=None):
         if isinstance(name, dict):
-            for key, value in name.iteritems():
+            for key, value in six.iteritems(name):
                 try:
                     param, value = self.coerceParameter(key, value)
                     self.params[param] = value

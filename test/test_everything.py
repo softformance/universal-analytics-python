@@ -56,7 +56,9 @@ class UAMPythonTestCase(unittest.TestCase):
     def testPersistentCampaignSettings(self):
         # Apply campaign settings
         self.tracker.set('campaignName', 'testing-campaign')
-        self.tracker.set('campaignMedium', 'testing-medium')
+        self.tracker.set({
+            'campaignMedium': 'testing-medium'
+        })
         self.tracker['campaignSource'] = 'test-source'
 
         self.assertEqual(self.tracker.params['cn'], 'testing-campaign')
