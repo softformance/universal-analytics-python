@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import print_function
 import os
 import sys
 
@@ -12,7 +13,7 @@ except ImportError:
 here = os.path.abspath(os.path.dirname(__file__))
 
 VERSION=open('commit-version').read().strip()
-print >>sys.stderr, "Preparing version {0}\n".format(VERSION or "NOTFOUND")
+print("Preparing version {0}\n".format(VERSION or "NOTFOUND"), file=sys.stderr)
 
 
 try:
