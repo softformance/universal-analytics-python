@@ -10,9 +10,11 @@ except ImportError:
     from distutils.core import setup
     from distutils.core.command.install import install
 
+import metadata as m
+
 here = os.path.abspath(os.path.dirname(__file__))
 
-VERSION=open('commit-version').read().strip()
+VERSION=m.version
 print("Preparing version {0}\n".format(VERSION or "NOTFOUND"), file=sys.stderr)
 
 
