@@ -12,7 +12,7 @@ except ImportError:
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-VERSION=open('commit-version').read().strip()
+VERSION='0.2.5'
 print("Preparing version {0}\n".format(VERSION or "NOTFOUND"), file=sys.stderr)
 
 
